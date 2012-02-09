@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Menu */
 body > header {
-	background: url(../img/menu-shadow.png) repeat-x center bottom;
+	background: url(../img/menu-base.png) repeat-x center bottom;
 	position: fixed;
 	text-align: center;
 	top: 0;
@@ -166,12 +166,10 @@ body > div {
 #banner {
 	background: url(../img/bg-batik-full.jpg) repeat-x bottom center #860900;
 	height: 282px;
-	text-align: center;
 	width: 100%;
 }
 	#banner > article {
 		margin: 0 auto;
-		text-align: left;
 		width: 960px;
 	}
 	#banner > article > header {
@@ -186,6 +184,13 @@ body > div {
 		font-size: 1.5em;
 		font-weight: 100;
 	}
+
+/* Firm */
+#firm {
+	color: #676767;
+	margin: 0 auto;
+	width: 960px;
+}
 
 /* =============================================================================
    Media Queries
