@@ -68,45 +68,89 @@ td { vertical-align: top; }
 
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
-
-
 /* ===== Primary Styles ========================================================
    Author: Sebastiaan Deckers
    ========================================================================== */
 
-@font-face {
-	font-family: Diavlo;
-	src: url("../fonts/Diavlo_II_37/Diavlo_LIGHT_II_37.otf") format("opentype");
-	font-weight: normal;
-}
-
+/* Fonts */
 @font-face {
 	font-family: Diavlo;
 	src: url("../fonts/Diavlo_II_37/Diavlo_BOLD_II_37.otf") format("opentype");
 	font-weight: bold;
 }
-
+@font-face {
+	font-family: Diavlo;
+	src: url("../fonts/Diavlo_II_37/Diavlo_MEDIUM_II_37.otf") format("opentype");
+	font-weight: normal;
+}
+@font-face {
+	font-family: Diavlo;
+	src: url("../fonts/Diavlo_II_37/Diavlo_LIGHT_II_37.otf") format("opentype");
+	font-weight: 100;
+}
 body {
-	text-align: center;
 	font-family: "Trebuchet MS";
 }
-
-body > * {
-	margin: 0 auto;
-	text-align: left;
-	width: 960px;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	font-family: Diavlo;
 	font-weight: bold;
 }
 
-
-
-
-
-
+/* Menu */
+body > header {
+	background: url(../img/menu-shadow.png) repeat-x center bottom;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+}
+	body > header > .masthead {
+		margin: 0 auto;
+		text-align: left;
+		width: 960px;
+	}
+	body > header > .masthead > h1 {
+		display: inline-block;
+		font-size: 1em;
+		margin: 0;
+		vertical-align: top;
+	}
+	body > header > .masthead > h1 > a {
+		background: no-repeat url(../img/header-logo.png);
+		height: 38px;
+		display: inline-block;
+		margin: 10px;
+		width: 191px;
+		/* Malarkey Image Replacement */
+		letter-spacing: normal;
+		text-indent: -9999px;
+		overflow: hidden;
+	}
+	body > header > .masthead > nav {
+		display: inline-block;
+		float: right;
+	}
+	body > header > .masthead > nav > ul {
+	}
+	body > header > .masthead > nav > ul > li {
+		display: inline;
+	}
+	body > header > .masthead > nav > ul > li > a:visited,
+	body > header > .masthead> nav > ul > li > a {
+		color: #454545;
+		display: inline-block;
+		font-family: Diavlo;
+		font-weight: normal;
+		padding: 1em 1em 2.5em 1em;
+		text-decoration: none;
+	}
+	body > header > .masthead > nav > ul > li > a:hover,
+	body > header > .masthead > nav > ul > li.active > a {
+		color: #a70c00;
+	}
+	body > header > .masthead > nav > ul > li.active > a {
+		background: url(../img/menu-arrow.png) no-repeat center bottom;
+	}
 
 /* =============================================================================
    Media Queries
