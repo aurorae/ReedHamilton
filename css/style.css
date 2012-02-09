@@ -71,12 +71,36 @@ td { vertical-align: top; }
 
 
 /* ===== Primary Styles ========================================================
-   Author:
+   Author: Sebastiaan Deckers
    ========================================================================== */
 
+@font-face {
+	font-family: Diavlo;
+	src: url("../fonts/Diavlo_II_37/Diavlo_LIGHT_II_37.otf") format("opentype");
+	font-weight: normal;
+}
 
+@font-face {
+	font-family: Diavlo;
+	src: url("../fonts/Diavlo_II_37/Diavlo_BOLD_II_37.otf") format("opentype");
+	font-weight: bold;
+}
 
+body {
+	text-align: center;
+	font-family: "Trebuchet MS";
+}
 
+body > * {
+	margin: 0 auto;
+	text-align: left;
+	width: 960px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Diavlo;
+	font-weight: bold;
+}
 
 
 
