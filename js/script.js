@@ -18,10 +18,25 @@
 		updateMenu();
 		window.addEventListener("hashchange", updateMenu, false);
 })();
-$("body > header > .masthead > nav > ul").live("click", "a", function(event) {
+$("body > header > .masthead > nav > ul").on("click", "a", function(event) {
 	var link = $(event.target);
 	if(link.parent().is(":not(.active)")) {
 		link.closest("ul").find(".active").removeClass("active");
 		link.parent().addClass("active");
 	}
+});
+
+/* Firm Practices
+ */
+$("#firm > aside li:not(.active) .snippet").hide();
+$("#firm > aside").on("click", "a", function(event) {
+	event.preventDefault();
+	var section = $(event.target).closest("li");
+	section
+		.siblings().filter(".active")
+			.removeClass("active")
+			.find(".snippet").slideUp();
+	section
+		.addClass("active")
+		.find(".snippet").slideDown();
 });

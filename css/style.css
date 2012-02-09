@@ -164,8 +164,11 @@ body > div {
 
 /* Banner */
 #banner {
-	background: url(../img/bg-batik-full.jpg) repeat-x bottom center #860900;
-	height: 282px;
+	background:
+		url(../img/bg-batik-full.jpg) repeat-x bottom center #860900;
+	background:
+		url(../img/bg-gradient.png) no-repeat center center,
+		url(../img/bg-batik-full.jpg) repeat-x bottom center #860900;
 	width: 100%;
 }
 	#banner > article {
@@ -174,7 +177,7 @@ body > div {
 	}
 	#banner > article > header {
 		color: #fff;
-		padding: 30px 20px 0 580px;
+		padding: 30px 20px 20px 580px;
 	}
 	#banner > article > header > h2 {
 		font-size: 1.5em;
@@ -191,6 +194,64 @@ body > div {
 	margin: 0 auto;
 	width: 960px;
 }
+	#firm > article {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		float: left;
+		padding: 0 20px 0 10px;
+		width: 62%;
+	}
+		#firm > article > h2 {
+			font-size: 2em;
+			margin: 0.5em 0;
+		}
+		#firm > article > p {
+			font-size: 0.75em;
+		}
+		#firm > article > ul {
+			list-style-image: url(../img/firm-bullet.png);
+		}
+			#firm > article > ul > li {
+				font-size: 0.75em;
+				font-weight: bold;
+				margin: 0.5em 0;
+				padding: 0 0 0 0.25em;
+			}
+	#firm > aside {
+		background: url(../img/firm-divider.png) no-repeat top left;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		float: right;
+		padding: 0 10px 0 20px;
+		width: 38%;
+	}
+		#firm > aside > h2 {
+			font-size: 2em;
+			margin: 0.5em 0;
+		}
+		#firm > aside > ul {
+			list-style-image: url(../img/practices-bullet.png);
+			padding: 0 0 0 15px;
+		}
+			#firm > aside > ul > li {
+			}
+				#firm > aside > ul > li > h3 {
+					font-size: 0.75em;
+					margin: 1em 0 0 0;
+				}
+					#firm > aside > ul > li > h3 > a {
+						color: #a40a00;
+						text-decoration: none;
+					}
+				#firm > aside > ul > li > .snippet > p {
+					font-size: 0.75em;
+					text-align: justify;
+				}
+				#firm > aside > ul > li > .snippet > p:first-of-type {
+					margin: 0;
+				}
 
 /* =============================================================================
    Media Queries
