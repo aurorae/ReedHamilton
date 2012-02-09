@@ -119,7 +119,7 @@ body > header {
 		background: no-repeat url(../img/header-logo.png);
 		height: 38px;
 		display: inline-block;
-		margin: 10px;
+		margin: 10px 0 0 10px;
 		width: 191px;
 		/* Malarkey Image Replacement */
 		letter-spacing: normal;
@@ -131,17 +131,22 @@ body > header {
 		float: right;
 	}
 	body > header > .masthead > nav > ul {
+		height: 67px;
 	}
 	body > header > .masthead > nav > ul > li {
 		display: inline;
 	}
 	body > header > .masthead > nav > ul > li > a:visited,
 	body > header > .masthead> nav > ul > li > a {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
 		color: #454545;
 		display: inline-block;
+		height: 67px;
 		font-family: Diavlo;
-		font-weight: normal;
-		padding: 1em 1em 2.5em 1em;
+		font-weight: 100;
+		padding: 1em 1.5em 2.5em 1.5em;
 		text-decoration: none;
 	}
 	body > header > .masthead > nav > ul > li > a:hover,
@@ -150,6 +155,36 @@ body > header {
 	}
 	body > header > .masthead > nav > ul > li.active > a {
 		background: url(../img/menu-arrow.png) no-repeat center bottom;
+	}
+
+/* Content */
+body > div {
+	margin-top: 57px;
+}
+
+/* Banner */
+#banner {
+	background: url(../img/bg-batik-full.jpg) repeat-x bottom center #860900;
+	height: 282px;
+	text-align: center;
+	width: 100%;
+}
+	#banner > article {
+		margin: 0 auto;
+		text-align: left;
+		width: 960px;
+	}
+	#banner > article > header {
+		color: #fff;
+		padding: 30px 20px 0 580px;
+	}
+	#banner > article > header > h2 {
+		font-size: 1.5em;
+	}
+	#banner > article > header > p {
+		font-family: Diavlo;
+		font-size: 1.5em;
+		font-weight: 100;
 	}
 
 /* =============================================================================
