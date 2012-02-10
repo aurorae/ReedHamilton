@@ -267,8 +267,11 @@ body > div > section {
 	min-height: 500px;
 }
 	#consultants ul {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
 		margin: 0 auto;
-		padding: 0 10px;
+		padding: 0 30px 0 10px;
 		width: 960px;
 	}
 	#consultants li {
@@ -313,6 +316,120 @@ body > div > section {
 		#consultants > .controls > .previous {
 		}
 		#consultants > .controls > .next {
+		}
+
+/* Contact */
+#contact {
+	background: url(../img/contact-texture.png) repeat top center #3e3e3e;
+	color: #fff;
+	min-height: 500px;
+	margin: 0 0 96px 0;
+	padding: 2em 0;
+}
+	#contact > article {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		margin: 0 auto;
+		overflow: hidden;
+		padding: 0 30px 0 10px;
+		width: 960px;
+	}
+	#contact > article > h2 {
+		font-size: 2em;
+		margin-bottom: 0;
+	}
+	#contact > article > figure {
+		float: left;
+		margin: 0 1em 0 0;
+		text-align: center;
+	}
+		#contact > article > figure > img {
+			height: 424px;
+			width: 537px;
+		}
+		#contact > article > figure > figcaption > a {
+			background-color: rgba(255, 255, 255, 0.2);
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			border-radius: 16px;
+			color: #f9f9f9;
+			display: inline-block;
+			height: 32px;
+			font-family: Diavlo;
+			font-weight: bold;
+			font-size: 0.85em;
+			margin: 0 0 1px 0;
+			padding: 6px 12px;
+			text-decoration: none;
+		}
+		#contact > article > figure > figcaption > a:hover {
+			text-decoration: underline;
+		}
+		#contact > article > figure > figcaption > a:active {
+			margin: 1px 0 0 0;
+		}
+	#contact > article > .vcard {
+		font-family: Diavlo;
+		font-size: 0.85em;
+		font-weight: normal;
+	}
+		#contact > article > .vcard .fn {
+			font-weight: bold;
+			margin: 0 0 1em 0;
+		}
+		#contact > article > .vcard > div:last-child {
+			margin: 1em 0;
+		}
+	#contact a.button {
+		background: url(../img/contact-button.png) no-repeat;
+		background-position: -14px -62px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		color: #fff;
+		display: inline-block;
+		font-family: Diavlo;
+		font-weight: normal;
+		font-size: 0.85em;
+		height: 38px;
+		margin: 0 0 1px 0;
+		padding: 8px 0;
+		text-align: center;
+		text-decoration: none;
+		width: 146px;
+	}
+		#contact a.button:hover {
+			background-position: -14px -13px;
+		}
+		#contact a.button:active {
+			margin: 1px 0 0 0;
+		}
+	#contact .linkedin {
+		background: url(../img/contact-linkedin.png) no-repeat top right;
+		color: #fff;
+		display: inline-block;
+		font-family: Diavlo;
+		font-size: 0.85em;
+		font-style: italic;
+		font-weight: normal;
+		margin: 0 0 0 70px;
+		padding: 50px 100px 10px 0;
+		position: relative;
+		text-align: right;
+		text-decoration: none;
+		width: 105px;
+	}
+		#contact .linkedin:hover {
+			text-decoration: underline;
+		}
+		#contact .linkedin:after {
+			bottom: 14px;
+			content: "\00bb ";
+			font-size: 0.5em;
+			position: absolute;
+			right: 92px;
 		}
 
 /* =============================================================================
