@@ -161,6 +161,9 @@ body > header {
 body > div {
 	margin-top: 57px;
 }
+body > div > section {
+	clear: both;
+}
 
 /* Banner */
 #banner {
@@ -192,6 +195,7 @@ body > div {
 #firm {
 	color: #676767;
 	margin: 0 auto;
+	min-height: 500px;
 	width: 960px;
 }
 	#firm > article {
@@ -238,6 +242,7 @@ body > div {
 			#firm > aside > ul > li {
 			}
 				#firm > aside > ul > li > h3 {
+					font-family: "Trebuchet MS";
 					font-size: 0.75em;
 					margin: 1em 0 0 0;
 				}
@@ -246,12 +251,69 @@ body > div {
 						text-decoration: none;
 					}
 				#firm > aside > ul > li > .snippet > p {
+					color: #868686;
 					font-size: 0.75em;
+					font-style: italic;
 					text-align: justify;
 				}
 				#firm > aside > ul > li > .snippet > p:first-of-type {
 					margin: 0;
 				}
+
+/* Consultants */
+#consultants {
+	background: url(../img/consultants-border.png) repeat-x bottom center;
+	color: #676767;
+	min-height: 500px;
+}
+	#consultants ul {
+		margin: 0 auto;
+		padding: 0 10px;
+		width: 960px;
+	}
+	#consultants li {
+		list-style-type: none;
+	}
+	#consultants h2 {
+		font-size: 2em;
+	}
+	#consultants figure {
+		float: left;
+	}
+	#consultants figure > img {
+		height: 206px;
+		margin: 100px 0 0 0;
+		width: 206px;
+	}
+	#consultants p {
+		font-size: 0.75em;
+		margin-left: 220px;
+	}
+	#consultants .name {
+		color: #000;
+		font-size: 1.8em;
+		font-style: italic;
+	}
+	#consultants .vcard {
+		background: url(../img/consultants-linkedin.png) no-repeat top left;
+		font-size: 0.75em;
+		margin: 10px 0 0 220px;
+		min-height: 38px;
+		padding: 10px 0 0 60px;
+	}
+	#consultants .vcard .fn {
+		display: none;
+	}
+	#consultants a {
+		color: #b74c4c;
+		text-decoration: none;
+	}
+	#consultants > .controls {
+	}
+		#consultants > .controls > .previous {
+		}
+		#consultants > .controls > .next {
+		}
 
 /* =============================================================================
    Media Queries
