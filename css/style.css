@@ -102,6 +102,7 @@ body > header {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 10;
 }
 	body > header > .masthead {
 		margin: 0 auto;
@@ -327,7 +328,6 @@ body > div > section {
 	background: url(../img/contact-texture.png) repeat top center #3e3e3e;
 	color: #fff;
 	min-height: 500px;
-	margin: 0 0 96px 0;
 	padding: 2em 0;
 }
 	#contact > article {
@@ -345,12 +345,12 @@ body > div > section {
 	}
 	#contact > article > figure {
 		float: left;
-		margin: 0 1em 0 0;
+		margin: 0 0.5em 0 0;
 		text-align: center;
 	}
 		#contact > article > figure > img {
-			height: 424px;
-			width: 537px;
+			height: 415px;
+			width: 510px;
 		}
 		#contact > article > figure > figcaption > a {
 			background-color: rgba(255, 255, 255, 0.2);
@@ -374,9 +374,27 @@ body > div > section {
 		#contact > article > figure > figcaption > a:active {
 			margin: 1px 0 0 0;
 		}
+	#contact > article > .directions {
+		float: left;
+		margin: 0 0.5em 0 0;
+		width: 240px;
+	}
+		#contact > article > .directions > h3 {
+		}
+		#contact > article > .directions > .instructions {
+		}
+			#contact > article > .directions > .instructions .place {
+			}
+			#contact > article > .directions > .instructions .eta {
+			}
+			#contact > article > .directions > .instructions ul {
+			}
+			#contact > article > .directions > .instructions li {
+			}
+			#contact > article > .directions > .instructions .distance {
+			}
 	#contact > article > .vcard {
-		font-family: Diavlo;
-		font-size: 0.85em;
+		font-size: 0.75em;
 		font-weight: normal;
 	}
 		#contact > article > .vcard .fn {
@@ -411,15 +429,15 @@ body > div > section {
 			margin: 1px 0 0 0;
 		}
 	#contact .linkedin {
-		background: url(../img/contact-linkedin.png) no-repeat top right;
+		background: url(../img/contact-linkedin.png) no-repeat bottom right;
 		color: #fff;
 		display: inline-block;
-		font-family: Diavlo;
-		font-size: 0.85em;
+		float: right;
+		font-size: 0.75em;
 		font-style: italic;
 		font-weight: normal;
-		margin: 0 0 0 70px;
-		padding: 50px 100px 10px 0;
+		margin: 0 0 0 0;
+		padding: 0 0 100px 0;
 		position: relative;
 		text-align: right;
 		text-decoration: none;
@@ -429,11 +447,11 @@ body > div > section {
 			text-decoration: underline;
 		}
 		#contact .linkedin:after {
-			bottom: 14px;
 			content: "\00bb ";
-			font-size: 0.5em;
+			font-size: 1.25em;
 			position: absolute;
-			right: 92px;
+			right: -10px;
+			top: 13px;
 		}
 
 /* =============================================================================
