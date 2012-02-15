@@ -100,7 +100,6 @@ h1, h2, h3, h4, h5, h6 {
 body > header {
 	background: url(../img/menu-base.png) repeat-x center bottom;
 	position: fixed;
-	text-align: center;
 	top: 0;
 	width: 100%;
 }
@@ -131,7 +130,7 @@ body > header {
 		float: right;
 	}
 	body > header > .masthead > nav > ul {
-		height: 67px;
+		height: 73px;
 	}
 	body > header > .masthead > nav > ul > li {
 		display: inline;
