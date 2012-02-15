@@ -297,14 +297,24 @@ body > div > section {
 		font-style: italic;
 	}
 	#consultants .vcard {
-		background: url(../img/consultants-linkedin.png) no-repeat top left;
 		font-size: 0.75em;
-		margin: 10px 0 0 220px;
+		margin: 1em 0 0 220px;
 		min-height: 38px;
 		padding: 10px 0 0 60px;
+		position: relative;
 	}
 	#consultants .vcard .fn {
-		display: none;
+		background: url(../img/consultants-linkedin.png) no-repeat top left;
+		display: inline-block;
+		height: 48px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 48px;
+		/* Malarkey Image Replacement */
+		letter-spacing: normal;
+		text-indent: -9999px;
+		overflow: hidden;
 	}
 	#consultants a {
 		color: #b74c4c;
