@@ -27,7 +27,7 @@ $("body > header > .masthead > nav > ul").on("click", "a", function(event) {
 	}
 });
 $(function(){
-	$("a[href^=#]").click(function(event){
+	$("body").on("click", "a[href^=#]", function(event){
 		var margin = 55,
 			name = $(this).attr("href").substr(1),
 			position = name.length
