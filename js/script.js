@@ -4,7 +4,7 @@
 /* Navigation Menu
  */
 (function() {
-	var updateMenu = function() {
+	var updateMenu = function(event) {
 			var links = $("body > header > .masthead > nav > ul a");
 			links.parent().filter(".active").removeClass("active");
 			links
@@ -14,6 +14,7 @@
 			if(!links.parent().hasClass("active")) {
 				links.parent().first().addClass("active");
 			}
+			event && event.preventDefault();
 		};
 		updateMenu();
 		window.addEventListener("hashchange", updateMenu, false);
@@ -25,12 +26,23 @@ $("body > header > .masthead > nav > ul").on("click", "a", function(event) {
 		link.parent().addClass("active");
 	}
 });
+$(function(){
+	$("a[href^=#]").click(function(event){
+		var margin = 55,
+			name = $(this).attr("href").substr(1),
+			position = name.length
+				? $("a[name=" + name + "], #" + name).offset().top
+				: 0;
+		$("body").animate({scrollTop: Math.max(0, position - margin)});
+		location.hash = "#" + name;
+		event.preventDefault();
+	});
+});
 
 /* Firm Practices
  */
 $("#firm > aside li:not(.active) .snippet").hide();
 $("#firm > aside").on("click", "a", function(event) {
-	event.preventDefault();
 	var section = $(event.target).closest("li");
 	section
 		.siblings().filter(".active")
@@ -39,4 +51,5 @@ $("#firm > aside").on("click", "a", function(event) {
 	section
 		.addClass("active")
 		.find(".snippet").slideDown();
+	event.preventDefault();
 });
