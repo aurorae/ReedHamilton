@@ -327,11 +327,11 @@ body > div > section {
 /* Contact */
 #contact {
 	background:
-		url(../img/bird-contact-page.png) no-repeat top center,
+		url(../img/bird-contact-page.png) no-repeat right -165px,
 		url(../img/contact-texture.png) repeat top center #3e3e3e;
 	color: #fff;
 	min-height: 500px;
-	padding: 2em 0 6em 0;
+	padding: 2em 0 4em 0;
 }
 	#contact > article {
 		-moz-box-sizing: border-box;
