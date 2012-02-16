@@ -159,6 +159,7 @@ body > header {
 
 /* Content */
 body > div {
+	background: url(../img/bird-contact-page.png) no-repeat center 500px;
 	margin-top: 57px;
 }
 body > div > section {
@@ -325,7 +326,9 @@ body > div > section {
 
 /* Contact */
 #contact {
-	background: url(../img/contact-texture.png) repeat top center #3e3e3e;
+	background:
+		url(../img/bird-contact-page.png) no-repeat top center,
+		url(../img/contact-texture.png) repeat top center #3e3e3e;
 	color: #fff;
 	min-height: 500px;
 	padding: 2em 0 6em 0;
