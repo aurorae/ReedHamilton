@@ -24,13 +24,7 @@ $("#firm > aside").on("click", "a", function(event) {
 /* Consultants Carousel
  */
 (function() {
-	var updatePosition = function() {
-			var position = $("#consultants > section > ul > li.active").index();
-			$("#consultants > .controls > .position > li")
-				.removeClass("active")
-				.eq(position).addClass("active");
-		},
-		step = function(delta) {
+	var step = function(delta) {
 			var pages = $("#consultants > section > ul > li"),
 				from = pages.filter(".active"),
 				position = pages.length > from.index() + delta
@@ -38,20 +32,16 @@ $("#firm > aside").on("click", "a", function(event) {
 					: 0,
 				to = pages.eq(position);
 			$([from, to]).toggleClass("active");
-			updatePosition();
 		},
 		navigate = function(position) {
 			var pages = $("#consultants > section > ul > li");
 			pages.filter(".active").removeClass("active");
 			pages.eq(position).addClass("active");
-			updatePosition();
 		};
 	$("#consultants > section > ul > li").each(function() {
-		var name = $(this).find("> h2").text(),
+		var name = $(this).find("> h2").html(),
 			role = $(this).find("> h3").text(),
 			avatar = $(this).find("> figure > img").attr("src");
-		$("#consultants > section > .controls > .position")
-			.append("<li><a href=''>" + name + "</a></li>");
 		if(!name || !avatar) return;
 		$("#consultants .overview")
 			.append("<li>" +
@@ -62,13 +52,8 @@ $("#firm > aside").on("click", "a", function(event) {
 				"</a>" +
 			"</li>");
 	});
-	updatePosition();
-	$("#consultants > section > .controls > .position").on("click", "a", function(event) {
-		navigate($(this).closest("li").index());
-		event.preventDefault();
-	});
 	$("#consultants .overview").on("click", "a", function(event) {
-		navigate($(this).closest("li").index() + 1);
+		navigate($(this).closest("li").index());
 		event.preventDefault();
 	});
 	$("#consultants > section > .controls > .previous").on("click", function(event) {

@@ -274,12 +274,27 @@ body > div > section {
 			url(../img/consultants-border.png) repeat-x bottom center;
 		color: #676767;
 		min-height: 600px;
+		padding: 2em 0 4em 0;
 	}
+	#consultants > section > header {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		margin: 0 auto;
+		position: relative;
+		width: 900px;
+	}
+		#consultants > section > header > .overview {
+		}
+		#consultants > section > header > .overview .given {
+			display: block;
+		}
 	#consultants > section > ul {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		margin: 0 auto;
+		min-height: 250px;
 		position: relative;
 		width: 900px;
 	}
@@ -347,7 +362,6 @@ body > div > section {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-		text-align: center;
 	}
 		#consultants .overview > li {
 			display: inline-block;
@@ -390,7 +404,7 @@ body > div > section {
 			height: 24px;
 			padding: 10px;
 			position: absolute;
-			top: 200px;
+			top: -50px;
 			width: 24px;
 			/* Malarkey Image Replacement */
 			letter-spacing: normal;
@@ -416,38 +430,6 @@ body > div > section {
 			padding-right: 0;
 			right: 0;
 		}
-		#consultants > section > .controls > .position {
-			position: absolute;
-			top: 460px;
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			text-align: center;
-			width: 100%;
-		}
-			#consultants > section > .controls > .position > li {
-				display: inline-block;
-				height: 15px;
-				margin: 0 10px;
-				width: 15px;
-			}
-			#consultants > section > .controls > .position > li > a {
-				background-color: rgba(0, 0, 0, 0.2);
-				border-radius: 50%;
-				display: inline-block;
-				height: 100%;
-				width: 100%;
-				/* Malarkey Image Replacement */
-				letter-spacing: normal;
-				text-indent: -9999px;
-				overflow: hidden;
-			}
-			#consultants > section > .controls > .position > li.active > a {
-				background-color: #676767;
-			}
-			#consultants > section > .controls > .position > li:first-child > a {
-				background-color: #980f0f;
-			}
 
 /* Contact */
 #contact {
