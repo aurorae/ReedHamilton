@@ -367,6 +367,7 @@ body > div > section {
 			display: inline-block;
 			font-family: Diavlo;
 			font-size: 0.85em;
+			text-align: center;
 			width: 150px;
 		}
 		#consultants .overview > li > a {
