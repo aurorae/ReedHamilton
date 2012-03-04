@@ -1,8 +1,10 @@
 /** Author: Sebastiaan Deckers <sebdeckers83@gmail.com>
+ ** Ruined by: Veronica <veronica@aurorae.sg>
  **/
 
 /* Navigation Menu
  */
+/* * /
 (function() {
 	var updateMenu = function(event) {
 			var links = $("body > header > .masthead > nav > ul a");
@@ -36,7 +38,19 @@ $("header nav").on("click", "a[href^=#]", function(event){
 	location.hash = "#" + name;
 	event.preventDefault();
 });
+/* */
 
+/* Highlight External Links
+ */
+function externalLinks() {
+	if (!document.getElementsByTagName)
+	return; var anchors = document.getElementsByTagName("a");
+	
+	for (var i=0; i<anchors.length; i++) {
+		var anchor = anchors[i]; if (anchor.getAttribute("href") && anchor.getAttribute("rel") == "external") anchor.target = "_blank";
+	}
+} window.onload = externalLinks;
+ 
 /* Firm Practices
  */
 $("#firm > aside li:not(.active) .snippet").hide();
@@ -56,13 +70,13 @@ $("#firm > aside").on("click", "a", function(event) {
  */
 (function() {
 	var updatePosition = function() {
-			var position = $("#consultants > ul > li.active").index();
+			var position = $("#consultants > section > ul > li.active").index();
 			$("#consultants > .controls > .position > li")
 				.removeClass("active")
 				.eq(position).addClass("active");
 		},
 		step = function(delta) {
-			var pages = $("#consultants > ul > li"),
+			var pages = $("#consultants > section > ul > li"),
 				from = pages.filter(".active"),
 				position = pages.length > from.index() + delta
 					? from.index() + delta
@@ -72,16 +86,16 @@ $("#firm > aside").on("click", "a", function(event) {
 			updatePosition();
 		},
 		navigate = function(position) {
-			var pages = $("#consultants > ul > li");
+			var pages = $("#consultants > section > ul > li");
 			pages.filter(".active").removeClass("active");
 			pages.eq(position).addClass("active");
 			updatePosition();
 		};
-	$("#consultants > ul > li").each(function() {
+	$("#consultants > section > ul > li").each(function() {
 		var name = $(this).find("> h2").text(),
 			role = $(this).find("> h3").text(),
 			avatar = $(this).find("> figure > img").attr("src");
-		$("#consultants > .controls > .position")
+		$("#consultants > section > .controls > .position")
 			.append("<li><a href=''>" + name + "</a></li>");
 		if(!name || !avatar) return;
 		$("#consultants .overview")
@@ -94,7 +108,7 @@ $("#firm > aside").on("click", "a", function(event) {
 			"</li>");
 	});
 	updatePosition();
-	$("#consultants > .controls > .position").on("click", "a", function(event) {
+	$("#consultants > section > .controls > .position").on("click", "a", function(event) {
 		navigate($(this).closest("li").index());
 		event.preventDefault();
 	});
@@ -102,11 +116,11 @@ $("#firm > aside").on("click", "a", function(event) {
 		navigate($(this).closest("li").index() + 1);
 		event.preventDefault();
 	});
-	$("#consultants > .controls > .previous").on("click", function(event) {
+	$("#consultants > section > .controls > .previous").on("click", function(event) {
 		step(-1);
 		event.preventDefault();
 	});
-	$("#consultants > .controls > .next").on("click", function(event) {
+	$("#consultants > section > .controls > .next").on("click", function(event) {
 		step(1);
 		event.preventDefault();
 	});

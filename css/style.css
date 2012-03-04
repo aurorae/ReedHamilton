@@ -10,6 +10,7 @@ audio:not([controls]) { display: none; }
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
+html, body { height: 100%; }
 
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
@@ -159,8 +160,9 @@ body > header {
 
 /* Content */
 body > div {
-	background: url(../img/bird-contact-page.png) no-repeat center 500px;
+	background: url(../img/firm-motif.png) no-repeat right bottom;
 	margin-top: 57px;
+	min-height: 100%;
 }
 body > div > section {
 	clear: both;
@@ -229,6 +231,7 @@ body > div > section {
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		float: right;
+		min-height: 500px;
 		padding: 0 10px 0 20px;
 		width: 38%;
 	}
@@ -263,11 +266,16 @@ body > div > section {
 
 /* Consultants */
 #consultants {
-	background: url(../img/consultants-border.png) repeat-x bottom center;
-	color: #676767;
-	min-height: 500px;
+	background: #fff;
 }
-	#consultants > ul {
+	#consultants > section {
+		background:
+			url(../img/consultants-motif.png) no-repeat bottom right,
+			url(../img/consultants-border.png) repeat-x bottom center;
+		color: #676767;
+		min-height: 600px;
+	}
+	#consultants > section > ul {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
@@ -275,7 +283,7 @@ body > div > section {
 		position: relative;
 		width: 900px;
 	}
-	#consultants > ul > li {
+	#consultants > section > ul > li {
 		left: 0;
 		list-style-type: none;
 		position: absolute;
@@ -289,7 +297,7 @@ body > div > section {
 		transition: all .4s ease-in-out;
 		width: 100%;
 	}
-	#consultants > ul > li.active {
+	#consultants > section > ul > li.active {
 		visibility: visible;
 		opacity: 1;
 	}
@@ -368,9 +376,8 @@ body > div > section {
 			display: block;
 			font-weight: 100;
 			padding: 0 15px;
-			text-transform: lowercase;
 		}
-	#consultants > .controls {
+	#consultants > section > .controls {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
@@ -378,7 +385,7 @@ body > div > section {
 		position: relative;
 		width: 960px;
 	}
-		#consultants > .controls > a {
+		#consultants > section > .controls > a {
 			background: url(../img/consultants-arrow.png) no-repeat right center;
 			height: 24px;
 			padding: 10px;
@@ -390,13 +397,13 @@ body > div > section {
 			text-indent: -9999px;
 			overflow: hidden;
 		}
-		#consultants > .controls > a:hover {
+		#consultants > section > .controls > a:hover {
 			margin-top: -1px;
 		}
-		#consultants > .controls > a:active {
+		#consultants > section > .controls > a:active {
 			margin-top: 1px;
 		}
-		#consultants > .controls > .previous {
+		#consultants > section > .controls > .previous {
 			left: 0;
 			padding-left: 0;
 			-moz-transform: scale(-1, 1);
@@ -405,11 +412,11 @@ body > div > section {
 			-webkit-transform: scale(-1, 1);
 			transform: scale(-1, 1);
 		}
-		#consultants > .controls > .next {
+		#consultants > section > .controls > .next {
 			padding-right: 0;
 			right: 0;
 		}
-		#consultants > .controls > .position {
+		#consultants > section > .controls > .position {
 			position: absolute;
 			top: 460px;
 			list-style-type: none;
@@ -418,13 +425,13 @@ body > div > section {
 			text-align: center;
 			width: 100%;
 		}
-			#consultants > .controls > .position > li {
+			#consultants > section > .controls > .position > li {
 				display: inline-block;
 				height: 15px;
 				margin: 0 10px;
 				width: 15px;
 			}
-			#consultants > .controls > .position > li > a {
+			#consultants > section > .controls > .position > li > a {
 				background-color: rgba(0, 0, 0, 0.2);
 				border-radius: 50%;
 				display: inline-block;
@@ -435,23 +442,25 @@ body > div > section {
 				text-indent: -9999px;
 				overflow: hidden;
 			}
-			#consultants > .controls > .position > li.active > a {
+			#consultants > section > .controls > .position > li.active > a {
 				background-color: #676767;
 			}
-			#consultants > .controls > .position > li:first-child > a {
+			#consultants > section > .controls > .position > li:first-child > a {
 				background-color: #980f0f;
 			}
 
 /* Contact */
 #contact {
 	background:
-		url(../img/bird-contact-page.png) no-repeat right -165px,
+		url(../img/contact-motif.png) repeat-y right top,
 		url(../img/contact-texture.png) repeat top center #3e3e3e;
 	color: #fff;
-	min-height: 500px;
-	padding: 2em 0 4em 0;
 }
-	#contact > article {
+	#contact > section {
+		min-height: 500px;
+		padding: 2em 0 4em 0;
+	}
+	#contact > section > article {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
@@ -460,20 +469,20 @@ body > div > section {
 		padding: 0 10px 0 10px;
 		width: 960px;
 	}
-	#contact > article > h2 {
+	#contact > section > article > h2 {
 		font-size: 2em;
 		margin-bottom: 0;
 	}
-	#contact > article > figure {
+	#contact > section > article > figure {
 		float: left;
 		margin: 0 10px 0 0;
 		text-align: center;
 	}
-		#contact > article > figure > img {
+		#contact > section > article > figure > img {
 			height: 415px;
 			width: 510px;
 		}
-		#contact > article > figure > figcaption > a {
+		#contact > section > article > figure > figcaption > a {
 			background-color: rgba(255, 255, 255, 0.2);
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
@@ -489,18 +498,18 @@ body > div > section {
 			padding: 6px 12px;
 			text-decoration: none;
 		}
-		#contact > article > figure > figcaption > a:hover {
+		#contact > section > article > figure > figcaption > a:hover {
 			text-decoration: underline;
 		}
-		#contact > article > figure > figcaption > a:active {
+		#contact > section > article > figure > figcaption > a:active {
 			margin: 1px 0 0 0;
 		}
-	#contact > article > .directions {
+	#contact > section > article > .directions {
 		float: left;
 		margin: 0 33px 0 0;
 		width: 240px;
 	}
-		#contact > article > .directions > h3 {
+		#contact > section > article > .directions > h3 {
 			background-color: rgba(172, 0, 0, 0.8);
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
@@ -513,7 +522,7 @@ body > div > section {
 			padding: 13px 0 0 0;
 			text-align: center;
 		}
-		#contact > article > .directions > .instructions {
+		#contact > section > article > .directions > .instructions {
 			background-color: rgba(255, 255, 255, 0.2);
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
@@ -526,48 +535,48 @@ body > div > section {
 			min-height: 400px;
 			padding: 13px;
 		}
-			#contact > article > .directions > .instructions > p:first-of-type {
+			#contact > section > article > .directions > .instructions > p:first-of-type {
 				margin-top: 0;
 			}
-			#contact > article > .directions > .instructions > p:last-of-type {
+			#contact > section > article > .directions > .instructions > p:last-of-type {
 				margin-bottom: 0;
 			}
-			#contact > article > .directions > .instructions .place {
+			#contact > section > article > .directions > .instructions .place {
 				font-weight: bold;
 			}
-			#contact > article > .directions > .instructions .eta {
+			#contact > section > article > .directions > .instructions .eta {
 				font-style: italic;
 			}
-			#contact > article > .directions > .instructions ol {
+			#contact > section > article > .directions > .instructions ol {
 				color: #f9f9f9;
 				list-style-position: inside;
 				padding: 0;
 			}
-			#contact > article > .directions > .instructions li {
+			#contact > section > article > .directions > .instructions li {
 				clear: both;
 			}
-			#contact > article > .directions > .instructions .distance {
+			#contact > section > article > .directions > .instructions .distance {
 				color: #080808;
 				float: right;
 			}
-			#contact > article > .directions > .instructions .note {
+			#contact > section > article > .directions > .instructions .note {
 				display: block;
 				font-style: italic;
 				padding-left: 1.5em;
 			}
-			#contact > article > .directions > .instructions ol ~ p {
+			#contact > section > article > .directions > .instructions ol ~ p {
 				font-size: 0.9em;
 			}
-	#contact > article > .vcard {
+	#contact > section > article > .vcard {
 		font-size: 0.75em;
 		font-weight: normal;
 		margin: 1em 0 0 0;
 	}
-		#contact > article > .vcard .fn {
+		#contact > section > article > .vcard .fn {
 			font-weight: bold;
 			margin: 0 0 1em 0;
 		}
-		#contact > article > .vcard > div:last-child {
+		#contact > section > article > .vcard > div:last-child {
 			margin: 1em 0;
 		}
 	#contact a.button {
@@ -599,26 +608,49 @@ body > div > section {
 		color: #fff;
 		display: inline-block;
 		float: right;
-		font-size: 0.75em;
+		font-size: 0.7em;
 		font-style: italic;
 		font-weight: normal;
 		margin: 0 0 0 0;
-		padding: 0 0 100px 0;
+		padding: 100px 0 0 0;
 		position: relative;
-		text-align: right;
 		text-decoration: none;
-		width: 105px;
+		width: 145px;
 	}
 		#contact .linkedin:hover {
 			text-decoration: underline;
 		}
 		#contact .linkedin:after {
-			content: "\00bb ";
+			content: " \00bb";
 			font-size: 1.25em;
-			position: absolute;
 			right: -10px;
 			top: 13px;
 		}
+
+/* Footer */
+body > footer {
+	background-color: #6b6b6b;
+	bottom: 0;
+	color: #fff;
+	height: 37px;
+	position: fixed;
+	width: 100%;
+}
+	body > footer > section {
+		margin: 0 auto;
+		width: 960px;
+	}
+	body > footer > section p {
+		font-size: 0.75em;
+		line-height: 37px;
+		margin: 0;
+	}
+	body > footer > section > .call {
+		float: left;
+	}
+	body > footer > section > .copyright {
+		float: right;
+	}
 
 /* =============================================================================
    Media Queries
