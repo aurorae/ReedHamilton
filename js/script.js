@@ -10,12 +10,13 @@ $(function() { $("a[href][rel=external]").attr({target: "_blank"}); });
  */
 $("#firm > aside li:not(.active) .snippet").hide();
 $("#firm > aside").on("click", "a", function(event) {
-	var section = $(event.target).closest("li");
+	var section = $(event.target).closest("li"),
+		isActive = section.hasClass("active");
 	section
-		.siblings().filter(".active")
+		.parent().children().filter(".active")
 			.removeClass("active")
 			.find(".snippet").slideUp();
-	section
+	!isActive && section
 		.addClass("active")
 		.find(".snippet").slideDown();
 	event.preventDefault();
