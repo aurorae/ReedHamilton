@@ -380,8 +380,8 @@ body > div > section {
 			width: 100%;
 		}
 		#consultants .overview > li img {
-			height: 135px;
-			width: 135px;
+			height: 120px;
+			width: 120px;
 		}
 		#consultants .overview > li .name {
 			font-weight: bold;
