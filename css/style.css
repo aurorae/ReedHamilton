@@ -274,7 +274,7 @@ body > div > section {
 			url(../img/consultants-border.png) repeat-x bottom center;
 		color: #676767;
 		min-height: 600px;
-		padding: 2em 0 4em 0;
+		padding: 2em 0 12em 0;
 	}
 	#consultants > section > header {
 		-moz-box-sizing: border-box;
