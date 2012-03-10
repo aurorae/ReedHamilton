@@ -4,7 +4,7 @@
 
 /* Highlight External Links
  */
-(function() { $("a[href][rel=external]").attr({target: "_blank"}); })();
+$(function() { $("a[href][rel=external]").attr({target: "_blank"}); });
 
 /* Firm Practices
  */
