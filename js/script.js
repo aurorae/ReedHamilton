@@ -38,6 +38,10 @@ $("#firm > aside").on("click", "a", function(event) {
 			var pages = $("#consultants > section > ul > li");
 			pages.filter(".active").removeClass("active");
 			pages.eq(position).addClass("active");
+			showControls();
+		},
+		showControls = function() {
+			$("#consultants > section > .controls").removeClass("hidden");
 		};
 	$("#consultants > section > ul > li").each(function() {
 		var name = $(this).find("> h2").html(),
@@ -65,4 +69,7 @@ $("#firm > aside").on("click", "a", function(event) {
 		step(1);
 		event.preventDefault();
 	});
+	if($("#consultants > section > ul > li").hasClass("active")) {
+		showControls();
+	}
 })();
