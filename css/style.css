@@ -258,7 +258,7 @@ body > div > section {
 					color: #868686;
 					font-size: 0.75em;
 					font-style: italic;
-					text-align: justify;
+					text-align: left;
 				}
 				#firm > aside > ul > li > .snippet > p:first-of-type {
 					margin: 0;
