@@ -305,11 +305,13 @@ body > div > section {
 		top: 0;
 		visibility: hidden;
 		opacity: 0;
+		/* Breaks on iOS5 * /
 		-moz-transition: all .4s ease-in-out;
 		-ms-transition: all .4s ease-in-out;
 		-o-transition: all .4s ease-in-out;
 		-webkit-transition: all .4s ease-in-out;
 		transition: all .4s ease-in-out;
+		/* */
 		width: 100%;
 	}
 	#consultants > section > ul > li.active {
@@ -635,7 +637,10 @@ body > footer {
 	body > footer > section > .copyright {
 		float: right;
 	}
-
+	body > footer a[href^=tel\:] {
+		color: inherit;
+		text-decoration: none;
+	}
 /* =============================================================================
    Media Queries
    ========================================================================== */
