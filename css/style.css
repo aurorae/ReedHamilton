@@ -637,7 +637,10 @@ body > footer {
 	body > footer > section > .copyright {
 		float: right;
 	}
-
+	body > footer a[href^=tel\:] {
+		color: inherit;
+		text-decoration: none;
+	}
 /* =============================================================================
    Media Queries
    ========================================================================== */
