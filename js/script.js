@@ -46,6 +46,7 @@ $("#firm > aside").on("click", "a", function(event) {
 	$("#consultants > section > ul > li").each(function() {
 		var name = $(this).find("> h2").html(),
 			role = $(this).find("> h3").text(),
+			location = $(this).find("> h4").text(),
 			avatar = $(this).find("> figure > img").attr("src");
 		if(!name || !avatar) return;
 		$("#consultants .overview")
@@ -54,6 +55,7 @@ $("#firm > aside").on("click", "a", function(event) {
 					"<img src='" + avatar.replace("_real.png", "_vect.png") + "' />" +
 					"<span class='name'>" + name + "</span>" +
 					"<span class='role'>" + role + "</span>" +
+					"<span class='location'>" + location + "</span>" +
 				"</a>" +
 			"</li>");
 	});
