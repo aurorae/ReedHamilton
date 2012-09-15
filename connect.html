@@ -32,8 +32,15 @@
 </header>
 <div role="main" id="contact">
 	<section>
-		<article>
-			<h2>Location</h2>
+		<header>
+			<h2>Locations</h2>
+			<ul>
+				<li><a href="#" onclick="toggle_visibility('rafflesplace','tseungwan')"><img src="img/locations/raffles-place.png" /><br /><strong>Singapore</strong><br />Raffles Place</a></li>
+				<li><a href="#" onclick="toggle_visibility('tseungwan','rafflesplace')"><img src="img/locations/tseung-wan.png" /><br /><strong>Hong Kong</strong><br />Central</a></li>
+			</ul>
+		</header>
+		<article id="rafflesplace" class="location">
+			<h2>Singapore</h2>
 			<figure>
 				<img src="img/contact-map.png" />
 				<figcaption>
@@ -42,7 +49,32 @@
 					</a>
 				</figcaption>
 			</figure>
-			<aside class="directions">
+			<div class="info">
+				<div class="vcard">
+					<div class="fn org">Reed Hamilton Pte Ltd</div>
+					<div class="adr">
+						<div class="street-address">82 Telok Ayer Street #02-07</div>
+						<div>
+							<span class="country-name">Singapore</span>
+							<span class="postal-code">048467</span>
+						</div>
+					</div>
+					<div>
+						Phone: <span class="tel">+65.6645.3350</span><br />
+						Fax: <span class="fax">+65.6513.9519</span>
+					</div>
+				</div>
+				<p>
+					<a href="http://www.reedhamilton.com/register/" rel="external" class="button">Register</a>
+				</p>
+				<p>
+					<a href="http://www.reedhamilton.com/jobs/" rel="external" class="button">Opportunities</a>
+				</p>
+				<p>
+					<a href="http://www.linkedin.com/company/reed-hamilton" rel="external" class="linkedin">Reed Hamilton<br />on Linkedin</a>
+				</p>
+			</div>
+						<aside class="directions">
 				<h3>Directions to Our Office</h3>
 				<div class="instructions">
 					<p>Walking directions to 82 Telok Ayer St from <span class="place">Raffles Place MRT near Republic Plaza</span> <span class="eta">(650m, approximately 7 mins)</span></p>
@@ -65,33 +97,45 @@
 							<span class="note">(Destination on the right)</span>
 						</li>
 					</ol>
-					<p>We are on the opposite side of the street to PWC and a DBS Branch, located approximately half way between Ying Fo Fui Kun and Fuk Tak Chi Museum. Look for staircase 82 and head right up to the second floor!</p>
+					<p>We are on the opposite side of the street to PWC and a DBS Branch, located directly next to Fuk Tak Chi Museum. Look for staircase 82 and head right up to the second floor!</p>
 					<p>If you are coming by Taxi, alight at Taxi Stand E07. We are right across the road.</p>
 				</div>
 			</aside>
-			<div class="vcard">
-				<div class="fn org">Reed Hamilton Pte Ltd</div>
-				<div class="adr">
-					<div class="street-address">82 Telok Ayer Street</div>
+		</article>
+		
+		<article id="tseungwan" class="location">
+			<h2>Hong Kong</h2>
+			<figure style="width: 600px;">
+				<figcaption style="margin-top: 150px; text-align: center;">
+					<a href="http://goo.gl/maps/zIZLX" rel="external">
+						Click here to get directions to us with Google Maps!
+					</a>
+				</figcaption>
+			</figure>
+			<div class="info">
+				<div class="vcard">
+					<div class="fn org">Reed Hamilton Limited</div>
+					<div class="adr">
+						<div class="street-address">Suite 08, 20/F,<br />One International Finance Centre,<br />1 Harbour View Street</div>
+						<div>
+							<span class="country-name">Hong Kong</span>
+						</div>
+					</div>
 					<div>
-						<span class="country-name">Singapore</span>
-						<span class="postal-code">048467</span>
+						Phone: <span class="tel">+852.3960.6491</span><br />
+						Fax: <span class="fax">+852.3669.8008</span>
 					</div>
 				</div>
-				<div>
-					Phone: <span class="tel">+65.6645.3350</span><br />
-					Fax: <span class="fax">+65.6513.9519</span>
-				</div>
+				<p>
+					<a href="http://www.reedhamilton.com/register/" rel="external" class="button">Register</a>
+				</p>
+				<p>
+					<a href="http://www.reedhamilton.com/jobs/" rel="external" class="button">Opportunities</a>
+				</p>
+				<p>
+					<a href="http://www.linkedin.com/company/reed-hamilton" rel="external" class="linkedin">Reed Hamilton<br />on Linkedin</a>
+				</p>
 			</div>
-			<p>
-				<a href="http://www.reedhamilton.com/register/" rel="external" class="button">Register</a>
-			</p>
-			<p>
-				<a href="http://www.reedhamilton.com/jobs/" rel="external" class="button">Opportunities</a>
-			</p>
-			<p>
-				<a href="http://www.linkedin.com/company/reed-hamilton" rel="external" class="linkedin">Reed Hamilton<br />on Linkedin</a>
-			</p>
 		</article>
 	</section>
 
@@ -109,6 +153,12 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+<script>
+function toggle_visibility(x,y){
+	document.getElementById(x).style.display = 'block';
+	document.getElementById(y).style.display = 'none';
+}
+</script>
 
 <!-- scripts concatenated and minified via ant build script-->
 <script src="js/plugins.js"></script>

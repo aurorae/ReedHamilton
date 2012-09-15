@@ -275,7 +275,7 @@ body > div > section {
 			url(../img/consultants-motif.png) no-repeat bottom right,
 			url(../img/consultants-border.png) repeat-x bottom center;
 		color: #676767;
-		min-height: 400px;
+		min-height: 500px;
 		padding: 1em 0 12em 0;
 	}
 	#consultants > section > header {
@@ -443,7 +443,7 @@ body > div > section {
 			padding-right: 0;
 			right: 0;
 		}
-		
+
 /* Contact */
 #contact {
 	background:
@@ -455,60 +455,27 @@ body > div > section {
 		min-height: 500px;
 		padding: 1em 0 4em 0;
 	}
-	#contact > section h2 {
-		font-size: 1.5em;
-		margin-bottom: 0;
-	}
-	#contact > section > header {
-		margin: 0 auto;
-		width: 900px;
-	}
-	#contact > section > header img {
-		height: 80px;
-		width: 80px;
-	}
-	#contact > section > header > ul {
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		margin: 0 auto;
-		position: relative;
-		text-align: center;
-	}
-	#contact > section > header > ul > li {
-		display: inline-block;
-		list-style-type: none;
-		margin: 10px 15px 0;
-	}
-	#contact > section > header > ul > li > a {
-		color: #fff;
-		display: block;
-		font-size: 0.8em;
-		text-decoration: none;
-	}
 	#contact > section > article {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-		display: none;
 		margin: 0 auto;
-		padding: 0;
 		overflow: hidden;
-		padding: 0;
-		width: 900px;
+		padding: 0 10px 0 10px;
+		width: 960px;
 	}
-	#contact > section > article.active {
-		display: block;
+	#contact > section > article > h2 {
+		font-size: 1.5em;
+		margin-bottom: 0;
 	}
 	#contact > section > article > figure {
-		float: right;
-		margin: 0 0 0 10px;
+		float: left;
+		margin: 0 10px 0 0;
 		text-align: center;
 	}
 		#contact > section > article > figure > img {
-			height: 325px;
-			padding: 0 15px;
-			width: 400px;
+			height: 415px;
+			width: 510px;
 		}
 		#contact > section > article > figure > figcaption > a {
 			background-color: rgba(255, 255, 255, 0.2);
@@ -534,7 +501,7 @@ body > div > section {
 		}
 	#contact > section > article > .directions {
 		float: left;
-		margin: 0 0 0 30px;
+		margin: 0 33px 0 0;
 		width: 240px;
 	}
 		#contact > section > article > .directions > h3 {
@@ -560,7 +527,7 @@ body > div > section {
 			font-family: "Trebuchet MS";
 			font-size: 0.75em;
 			margin: 3px 0 0 0;
-			min-height: 320px;
+			min-height: 400px;
 			padding: 13px;
 		}
 			#contact > section > article > .directions > .instructions > p:first-of-type {
@@ -595,25 +562,16 @@ body > div > section {
 			#contact > section > article > .directions > .instructions ol ~ p {
 				font-size: 0.9em;
 			}
-	#contact > section > article > .info {
-		float: left;
-		margin: 0;
-		padding: 0;
-		width: 190px;
-	}
-	#contact > section > article .vcard {
+	#contact > section > article > .vcard {
 		font-size: 0.75em;
 		font-weight: normal;
 		margin: 1em 0 0 0;
 	}
-		#contact > section > article .vcard .fn {
+		#contact > section > article > .vcard .fn {
 			font-weight: bold;
 			margin: 0 0 1em 0;
 		}
-		#contact > section > article .vcard .org {
-			font-size: 1.2em;
-		}
-		#contact > section > article .vcard > div:last-child {
+		#contact > section > article > .vcard > div:last-child {
 			margin: 1em 0;
 		}
 	#contact a.button {
@@ -649,7 +607,7 @@ body > div > section {
 		font-style: italic;
 		font-weight: normal;
 		margin: 0 0 0 0;
-		padding: 50px 0 0 0;
+		padding: 100px 0 0 0;
 		position: relative;
 		text-decoration: none;
 		width: 145px;
