@@ -104,8 +104,9 @@ h2 {
 /* Menu */
 body > header {
 	background: url(../img/menu-base.png) repeat-x center bottom;
-	position: fixed;
-	top: 0;
+	height: 73px;
+	position: relative;
+	margin: 0 auto -73px;
 	width: 100%;
 	z-index: 10;
 }
@@ -179,7 +180,9 @@ body > div > section {
 	background:
 		url(../img/bg-gradient.png) no-repeat center center,
 		url(../img/bg-batik-full.jpg) repeat-x bottom center #860900;
+	position: absolute;
 	width: 100%;
+	z-index: 0;
 }
 	#banner > article {
 		margin: 0 auto;
@@ -203,6 +206,8 @@ body > div > section {
 	color: #676767;
 	margin: 0 auto;
 	min-height: 500px;
+	padding-top: 200px;
+	position: relative;
 	width: 960px;
 }
 	#firm > article {
