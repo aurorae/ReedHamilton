@@ -1,5 +1,5 @@
 /** Authors: Sebastiaan Deckers <sebdeckers83@gmail.com>,
- **          Veronica <veronica@aurorae.sg>
+ ** 
  **/
 
 /* Highlight External Links

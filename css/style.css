@@ -96,15 +96,24 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Diavlo;
 	font-weight: bold;
 }
-
 h2 {
 	margin: 0.5em 0;
+}
+h4 {
+	text-align: center;
+	font-size: 1em;
+}
+p {
+	font-size: 0.75em;
 }
 
 /* Menu */
 body > header {
-	background: url(../img/menu-base.png) repeat-x center bottom;
-	height: 73px;
+	background: #fff;
+	-webkit-box-shadow:  0px 5px 15px 0px rgba(0, 0, 0, 0.20);
+    box-shadow:  0px 5px 15px 0px rgba(0, 0, 0, 0.20);
+	border-bottom: 1px solid #e5e5e5;
+	height: 57px;
 	position: relative;
 	margin: 0 auto -73px;
 	width: 100%;
@@ -180,6 +189,7 @@ body > div > section {
 	background:
 		url(../img/bg-gradient.png) no-repeat center center,
 		url(../img/bg-batik-full.jpg) repeat-x bottom center #860900;
+	background-size: auto 200px;
 	position: absolute;
 	width: 100%;
 	z-index: 0;
@@ -190,10 +200,11 @@ body > div > section {
 	}
 	#banner > article > header {
 		color: #fff;
-		padding: 30px 20px 20px 580px;
+		padding: 0 20px 0 580px;
 	}
 	#banner > article > header > h2 {
 		font-size: 1.5em;
+		margin: 40px auto;
 	}
 	#banner > article > header > p {
 		font-family: Diavlo;
@@ -206,7 +217,7 @@ body > div > section {
 	color: #676767;
 	margin: 0 auto;
 	min-height: 500px;
-	padding-top: 200px;
+	padding-top: 150px;
 	position: relative;
 	width: 960px;
 }
@@ -271,6 +282,60 @@ body > div > section {
 					margin: 0;
 				}
 
+/* Process */
+#process {
+	background: url(../img/bg-process.png) no-repeat 90% -80px;
+	color: #676767;
+	min-height: 350px;
+}
+	#process > section {
+		margin: 0 auto;
+		padding: 1em 0 6em 0;
+		position: relative;
+		width: 900px;
+	}
+	#process > section > article.whatwedo > section {
+		float: left;
+		width: 50%;
+	}
+	#process > section > article.whatwedo > section > ul {
+		margin-top: 8px;
+	}
+	#process > section > article.whatwedo > section > ul > li {
+		font-size: 0.75em;		
+	}
+	#process > section > article.whatwedo > hr {
+		background: url(../img/divider.png);
+		background-size: contain;
+		border: none;
+		height: 35px;
+		width: 900px;
+	}
+	#process > section > article.howwedo {
+		background: url(../img/process_map.png) no-repeat center top;
+		background-size: contain;
+		min-height: 300px;
+		padding-top: 125px;
+	}
+	#process > section > article.howwedo h4 {
+		background: url(../img/process_milestones.png) no-repeat center bottom;
+		height: 50px;
+	}
+	#process > section > article.howwedo ul {
+		display: block;
+		list-style: none;
+		margin: 0 auto;
+		padding: 0;
+	}
+	#process > section > article.howwedo ul li {
+		box-sizing: border-box;
+		display: inline-block;
+		padding: 3px;
+		vertical-align: top;
+		width: 175px;
+	}
+
+
 /* Consultants */
 #consultants {
 	background: #fff;
@@ -281,7 +346,7 @@ body > div > section {
 			url(../img/consultants-border.png) repeat-x bottom center;
 		color: #676767;
 		min-height: 400px;
-		padding: 1em 0 12em 0;
+		padding: 1em 0 11em 0;
 	}
 	#consultants > section > header {
 		-moz-box-sizing: border-box;
@@ -291,8 +356,6 @@ body > div > section {
 		position: relative;
 		width: 900px;
 	}
-		#consultants > section > header > .overview {
-		}
 	#consultants > section > ul {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
@@ -452,189 +515,91 @@ body > div > section {
 /* Contact */
 #contact {
 	background:
-		url(../img/contact-motif.png) repeat-y right top,
-		url(../img/contact-texture.png) repeat top center #3e3e3e;
-	color: #fff;
+		url(../img/map.png) no-repeat 10% -80px #fff;
+	color: #676767;
 }
 	#contact > section {
 		min-height: 500px;
 		padding: 1em 0 4em 0;
 	}
-	#contact > section h2 {
+	#contact > section > header > h2 {
+		float: left;
 		font-size: 1.5em;
 		margin-bottom: 0;
+	}
+	#contact > section > header > .jobs {
+		float: right;
+		margin-top: 10px;
 	}
 	#contact > section > header {
 		margin: 0 auto;
 		width: 900px;
 	}
-	#contact > section > header img {
-		height: 80px;
-		width: 80px;
-	}
-	#contact > section > header > ul {
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		margin: 0 auto;
-		position: relative;
-		text-align: center;
-	}
-	#contact > section > header > ul > li {
-		display: inline-block;
-		list-style-type: none;
-		margin: 10px 15px 0;
-	}
-	#contact > section > header > ul > li > a {
-		color: #fff;
-		display: block;
-		font-size: 0.8em;
-		text-decoration: none;
-	}
 	#contact > section > article {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-		display: none;
+		clear: both;
 		margin: 0 auto;
-		padding: 0;
-		overflow: hidden;
-		padding: 0;
-		width: 900px;
+		padding: 0 0 0 400px;
+		max-width: 900px;
 	}
-	#contact > section > article.active {
-		display: block;
-	}
-	#contact > section > article > figure {
-		float: right;
-		margin: 0 0 0 10px;
+	#contact > section > article > section {
+		float: left;
+		margin: 40px 20px;
 		text-align: center;
+		width: 190px;
 	}
-		#contact > section > article > figure > img {
-			height: 325px;
-			padding: 0 15px;
-			width: 400px;
-		}
-		#contact > section > article > figure > figcaption > a {
-			background-color: rgba(255, 255, 255, 0.2);
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-			border-radius: 16px;
-			color: #f9f9f9;
-			display: inline-block;
-			height: 32px;
-			font-family: Diavlo;
-			font-weight: bold;
-			font-size: 0.85em;
-			margin: 0 0 1px 0;
-			padding: 6px 12px;
-			text-decoration: none;
-		}
-		#contact > section > article > figure > figcaption > a:hover {
-			text-decoration: underline;
-		}
-		#contact > section > article > figure > figcaption > a:active {
-			margin: 1px 0 0 0;
-		}
-	#contact > section > article > .directions {
-		float: left;
-		margin: 0 0 0 30px;
-		width: 240px;
-	}
-		#contact > section > article > .directions > h3 {
-			background-color: rgba(172, 0, 0, 0.8);
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-			border-radius: 9px 9px 0 0;
-			font-family: "Trebuchet MS";
-			font-size: 0.75em;
-			height: 41px;
-			margin: 0;
-			padding: 13px 0 0 0;
-			text-align: center;
-		}
-		#contact > section > article > .directions > .instructions {
-			background-color: rgba(255, 255, 255, 0.2);
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-			border-radius: 0 0 7px 7px / 0 0 8px 8px;
-			color: #1c1c1c;
-			font-family: "Trebuchet MS";
-			font-size: 0.75em;
-			margin: 3px 0 0 0;
-			min-height: 320px;
-			padding: 13px;
-		}
-			#contact > section > article > .directions > .instructions > p:first-of-type {
-				margin-top: 0;
-			}
-			#contact > section > article > .directions > .instructions > p:last-of-type {
-				margin-bottom: 0;
-			}
-			#contact > section > article > .directions > .instructions .place {
-				font-weight: bold;
-			}
-			#contact > section > article > .directions > .instructions .eta {
-				font-style: italic;
-			}
-			#contact > section > article > .directions > .instructions ol {
-				color: #f9f9f9;
-				list-style-position: inside;
-				padding: 0;
-			}
-			#contact > section > article > .directions > .instructions li {
-				clear: both;
-			}
-			#contact > section > article > .directions > .instructions .distance {
-				color: #080808;
-				float: right;
-			}
-			#contact > section > article > .directions > .instructions .note {
-				display: block;
-				font-style: italic;
-				padding-left: 1.5em;
-			}
-			#contact > section > article > .directions > .instructions ol ~ p {
-				font-size: 0.9em;
-			}
-	#contact > section > article > .info {
-		float: left;
+	#contact > section > article > section h3 {
+		color: #981c1f;
 		margin: 0;
 		padding: 0;
-		width: 190px;
+	}
+	#contact > section > article > section h3 + p {
+		margin: -4px 0 0;
+		padding: 0;
 	}
 	#contact > section > article .vcard {
 		font-size: 0.75em;
 		font-weight: normal;
 		margin: 1em 0 0 0;
 	}
-		#contact > section > article .vcard .fn {
-			font-weight: bold;
-			margin: 0 0 1em 0;
-		}
-		#contact > section > article .vcard .org {
-			font-size: 1.2em;
-		}
-		#contact > section > article .vcard > div:last-child {
-			margin: 1em 0;
-		}
+	#contact > section > article .vcard .adr {
+		margin-bottom: 20px;
+	}
+	#contact > section > article .vcard .gmap {
+		margin-top: 20px;
+	}
+	#contact > section > article .vcard .tel,
+	#contact > section > article .vcard .fax {
+		color: #981c1f;
+		font-weight: bold;
+		vertical-align: top;
+	}
+	#contact > section > article .vcard .tel:before {
+		content: url(../img/icon_tel.png);
+		margin-right: 10px;
+	}
+	#contact > section > article .vcard .fax:before {
+		content: url(../img/icon_fax.png);
+		margin-right: 10px;
+	}
 	#contact a.button {
-		background: url(../img/contact-button.png) no-repeat;
+		background: #981c1f;
 		background-position: -14px -62px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		color: #fff;
 		display: inline-block;
 		font-family: Diavlo;
+		font-size: 0.85rem;
 		font-weight: normal;
-		font-size: 0.85em;
-		height: 38px;
-		margin: 0 0 1px 0;
-		padding: 8px 0;
+		height: 32px;
+		line-height: 32px;
 		text-align: center;
 		text-decoration: none;
 		width: 146px;
@@ -645,53 +610,83 @@ body > div > section {
 		#contact a.button:active {
 			margin: 1px 0 0 0;
 		}
-	#contact .linkedin {
-		background: url(../img/contact-linkedin.png) no-repeat bottom right;
-		color: #fff;
-		display: inline-block;
-		float: right;
-		font-size: 0.7em;
-		font-style: italic;
-		font-weight: normal;
-		margin: 0 0 0 0;
-		padding: 50px 0 0 0;
-		position: relative;
-		text-decoration: none;
-		width: 145px;
-	}
-		#contact .linkedin:hover {
-			text-decoration: underline;
-		}
-		#contact .linkedin:after {
-			content: " \00bb";
-			font-size: 1.25em;
-			right: -10px;
-			top: 13px;
-		}
+
 
 /* Footer */
 body > footer {
-	background-color: #6b6b6b;
-	bottom: 0;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 49%, rgba(152,28,31,1) 50%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(25%,rgba(255,255,255,1)), color-stop(49%,rgba(255,255,255,1)), color-stop(50%,rgba(152,28,31,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 49%,rgba(152,28,31,1) 50%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 49%,rgba(152,28,31,1) 50%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 49%,rgba(152,28,31,1) 50%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 49%,rgba(152,28,31,1) 50%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#981c1f',GradientType=0 ); /* IE6-9 */	bottom: 0;
 	color: #fff;
-	height: 37px;
+	height: 70px;
 	position: fixed;
 	width: 100%;
 }
 	body > footer > section {
 		margin: 0 auto;
+		position: relative;
 		width: 960px;
 	}
+	body > footer > section > article.linkedin > a {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	body > footer > section > article.linkedin > p {
+		position: absolute;
+		left: 70px;
+	}
+	body > footer > section > article.linkedin > p > a {
+		color: #a70c00;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	body > footer > section > article.linkedin > p > a:after {
+		content: " \00bb";
+	}
+	body > footer > section > article.inac {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 50%;
+	}
+	body > footer > section > article.inac img {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	body > footer > section > article.inac p > a {
+		color: #676767;
+		font-size: 0.9em;
+		line-height: 1.2em;
+		margin-top: 3px;
+		position: absolute;
+		right: 35px;
+		text-decoration: none;
+		text-align: right;
+		vertical-align: top;
+	}
+	body > footer > section > article.inac span {
+		color: #a70c00;
+	}
 	body > footer > section p {
-		font-size: 0.75em;
-		line-height: 37px;
+		font-size: 0.72em;
+		line-height: 35px;
 		margin: 0;
 	}
 	body > footer > section > .call {
-		float: left;
+		position: absolute;
+		left: 70px;
+		top: 35px;
 	}
 	body > footer > section > .copyright {
-		float: right;
+		position: absolute;
+		right: 0;
+		top: 35px;
 	}
 	body > footer a[href^=tel\:] {
 		color: inherit;
